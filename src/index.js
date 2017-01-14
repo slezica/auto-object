@@ -32,7 +32,7 @@ function createProxy(target, factory) {
 function createProxyHandler(factory) {
   return {
     get(target, name) {
-      if (! (name in target)) {
+      if (! (name in target) || (name instanceof Symbol)) {
         target[name] = factory(name)
       }
 
