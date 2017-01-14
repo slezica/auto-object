@@ -1,0 +1,32 @@
+{
+  "name": "auto-object",
+  "version": "1.0.0",
+  "description": "An object that automatically creates properties when accessed",
+  "author": "Santiago Lezica <salezica@gmail.com> (https://github.com/slezica/)",
+  "homepage": "https://github.com/slezica/auto-object",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/slezica/auto-object.git"
+  },
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "babel src --out-dir dist",
+    "test": "mocha --compilers js:babel-register",
+    "prepublish": "npm run build"
+  },
+  "files": ["dist"],
+  "license": "MIT",
+  "devDependencies": {
+    "babel-cli": "^6.18.0",
+    "babel-preset-es2015": "^6.18.0",
+    "babel-register": "^6.18.0",
+    "chai": "^3.5.0",
+    "mocha": "^3.2.0",
+    "sinon": "^1.17.6"
+  },
+  "babel": {
+    "presets": [
+      "latest"
+    ]
+  }
+}
